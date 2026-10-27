@@ -1,0 +1,22 @@
+.build/
+dist/
+.swiftpm/
+
+# Local credentials and personal working data
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*credentials*.yaml
+*credentials*.yml
+*credentials*.json
+*.log
+.DS_Store
+__pycache__/
+*.pyc
+
+# Internal local validation diary (not part of the distributed source)
+设计与验证.md

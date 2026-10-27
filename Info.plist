@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleExecutable</key><string>DawnTranslate</string>
+<key>CFBundleIdentifier</key><string>local.dawn.translate</string>
+<key>CFBundleName</key><string>DawnTranslate</string>
+<key>CFBundleDisplayName</key><string>DawnTranslate</string>
+<key>CFBundleVersion</key><string>14</string>
+<key>CFBundleShortVersionString</key><string>0.4.0</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>CFBundleIconFile</key><string>AppIcon</string>
+<key>LSMinimumSystemVersion</key><string>14.0</string>
+<key>NSHighResolutionCapable</key><true/>
+<key>NSMicrophoneUsageDescription</key><string>录制中英文发言，在本机自动识别后翻译成英文，由你发送到 Teams。</string>
+<key>NSAudioCaptureUsageDescription</key><string>获取 Teams 会议声音，在本机自动识别中英文并生成对照字幕。</string>
+</dict></plist>
