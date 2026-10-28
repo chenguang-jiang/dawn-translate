@@ -1,0 +1,33 @@
+{
+    "identifier": "local.dawn.translate.bob",
+    "version": "0.1.0",
+    "category": "translate",
+    "name": "DawnTranslate",
+    "summary": "使用 DawnTranslate 的中英翻译提示词，调用你自己的 Chat Completions 兼容服务。",
+    "author": "chenguang-jiang",
+    "homepage": "https://github.com/chenguang-jiang/dawn-translate",
+    "appcast": "https://github.com/chenguang-jiang/dawn-translate/raw/main/bob-plugin/appcast.json",
+    "minBobVersion": "0.5.0",
+    "options": [
+        {
+            "identifier": "baseURL",
+            "type": "text",
+            "title": "服务地址",
+            "defaultValue": "https://api.deepseek.com",
+            "desc": "Chat Completions 兼容接口。需使用 HTTPS；本机服务可用 http://localhost。不要在地址中放密钥或查询参数。"
+        },
+        {
+            "identifier": "model",
+            "type": "text",
+            "title": "模型",
+            "defaultValue": "deepseek-flash",
+            "desc": "服务商提供的模型 ID。"
+        },
+        {
+            "identifier": "apiKey",
+            "type": "text",
+            "title": "API 密钥",
+            "desc": "保存在 Bob 的插件设置中，只随请求发送到上面的服务地址。"
+        }
+    ]
+}

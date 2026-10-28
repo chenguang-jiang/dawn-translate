@@ -1,0 +1,12 @@
+{
+    "identifier": "local.dawn.translate.bob",
+    "versions": [
+        {
+            "version": "0.1.0",
+            "desc": "首个版本：DawnTranslate 中英翻译提示词，调用你自己的 Chat Completions 兼容服务。",
+            "sha256": "cf81ce5adf6262d5b393448ebcf14525a3f94e08b1d4f846085d3805ebeef657",
+            "url": "https://github.com/chenguang-jiang/dawn-translate/releases/download/bob-plugin-v0.1.0/DawnTranslate-0.1.0.bobplugin",
+            "minBobVersion": "0.5.0"
+        }
+    ]
+}

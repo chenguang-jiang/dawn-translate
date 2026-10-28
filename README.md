@@ -65,6 +65,21 @@ Mac 上的中英文沟通助手：**文字互译、邮件回复，以及 Teams�
 - 尚未完成 Teams／飞书双方真实会议的端到端验收。不要将当前实现当作已验证的会议效果承诺。
 - 邮件模板当前保留作者自用署名。使用生成结果前应核对并修改署名及内容，软件不会自动发邮件。
 
+## Bob 翻译插件
+
+[下载 Bob 插件](https://github.com/chenguang-jiang/dawn-translate/releases/tag/bob-plugin-v0.1.0)
+
+`bob-plugin/` 是给 [Bob](https://bobtranslate.com) 用的文本翻译插件。它使用与 DawnTranslate 相同的中英翻译提示词、服务地址规则和错误提示，调用**你自己的** Chat Completions 兼容服务。它不依赖 DawnTranslate.app，也不读取应用钥匙串里的密钥。
+
+```bash
+bash scripts/test-bob-plugin.sh       # 本地假服务上的插件检查
+bash scripts/package-bob-plugin.sh    # 生成 dist/DawnTranslate-<版本>.bobplugin
+```
+
+双击 `.bobplugin` 安装，然后在 Bob 的“服务”中添加 DawnTranslate，填写服务地址、模型和 API 密钥。密钥只保存在 Bob 的插件设置里。支持自动检测、简体中文和英文；暂不支持译成繁体中文。Bob 的网络接口无法禁止重定向，所以请填写最终的 API 地址。
+
+发布新版本：改 `bob-plugin/info.json` 的版本号并打包，把新版本加到 `bob-plugin/appcast.json` 最前面（填打包输出的 SHA-256），再把 `.bobplugin` 上传到标签为 `bob-plugin-v<版本>` 的 Release。已安装的 Bob 会据此提示更新。
+
 ## 从源码构建
 
 需要 Xcode Command Line Tools、CMake 和网络连接。首次构建会下载固定版本的 whisper.cpp 及经过 SHA-256 验证的语音模型。
